@@ -1,0 +1,27 @@
+
+.highlight {
+    background-color: yellow;
+}
+
+
+.red-text {
+    color: red;
+}
+
+
+#special {
+    background-color: black;
+    color: white;
+    font-style: italic;
+    padding: 5px;
+}
+h2 {
+    
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    margin: 0;
+    padding: 0;
+}
