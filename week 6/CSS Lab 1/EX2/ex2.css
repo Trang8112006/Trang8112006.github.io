@@ -1,0 +1,77 @@
+body {
+    font-family: Roboto, sans-serif;
+    background: #e2d7aa;
+    color: #000000;
+    font-size: 16px;
+    width: 1180px;
+    margin: 0 auto;
+}
+nav {
+    margin: 30px;
+}
+nav a {
+    font-size: 28px;
+    color: #000000;
+    text-decoration: none;
+    margin: 0 15px;
+}
+nav a:last-child {
+    color: #0a2d4a;
+    font-weight: bold;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.article {
+    width: 30%;
+    background: #f4e7c5;
+    padding: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.article img {
+    width: 100%;
+    height: auto;
+}
+h1 {
+    text-align: center;
+    font-size: 60px;
+    margin-top: 65px;
+    font-family: 'Indie Flower', cursive;
+}
+h2 {
+    font-size: 22px;
+}
+.posted {
+    font-size: 14px;
+    color: #333;
+}
+.posted a {
+    color: blue;
+    font-weight: bold;
+}
+p:first-letter {
+    font-family: EucrosiaUPC, sans-serif;
+    font-size: 40px;
+}
+.button-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.button {
+    background: #8b5a2b;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+footer {
+    margin-top: 30px;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    background: #d4c4a1;
+}
