@@ -75,3 +75,14 @@ footer {
     font-size: 14px;
     background: #d4c4a1;
 }
+.button-container img{
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    align-items: center; 
+}
