@@ -58,8 +58,8 @@ p:first-letter {
 .button-container {
     margin-top: 10px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: 100px;
+    
 }
 .button {
     background: #8b5a2b;
