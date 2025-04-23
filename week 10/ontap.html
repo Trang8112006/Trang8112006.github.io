@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang linh kiện máy tính</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .menu {
+            background-color: #333;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+        .menu a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        h2 {
+            font-weight: bold;
+        }
+        table {
+            width: 60%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: left;
+        }
+        .buttons {
+            margin: 10px 0;
+        }
+        .form-container {
+            width: 60%;
+            margin-top: 20px;
+            border: 1px solid #000;
+            padding: 20px;
+        }
+        .form-container input, .form-container textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+        /* Màu chữ thay đổi */
+        .color-toggle {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu" id="menu">
+    <a href="#">Trang chủ</a> -
+    <a href="#">Sách ©</a> -
+    <a href="#">Tác giả ™</a> -
+    <a href="#">Liên hệ</a>
+</div>
+
+<button onclick="toggleMenu()">Ẩn/Hiện Menu</button>
+
+<h2 id="title">Bảng linh kiện máy tính ©</h2>
+
+<table id="components-table">
+    <thead>
+        <tr>
+            <th>Tên linh kiện</th>
+            <th>Giá (VND)</th>
+            <th>Đánh giá ★</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>CPU Intel™ Core i5</td>
+            <td>5000000</td>
+            <td>4.5/5</td>
+        </tr>
+        <tr>
+            <td>RAM DDR4 8GB</td>
+            <td>800000</td>
+            <td>4.0/5</td>
+        </tr>
+        <tr>
+            <td>Ổ cứng SSD 256GB</td>
+            <td>1200000</td>
+            <td>4.8/5</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="buttons">
+    <button onclick="changeTextColor()">Đổi màu chữ</button>
+    <button onclick="sortByPrice()">Sắp xếp theo giá</button>
+</div>
+
+<div class="form-container">
+    <h3>Biểu mẫu liên hệ</h3>
+    <form>
+        <label for="name">Họ tên:</label><br>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+
+        <label for="message">Tin nhắn:</label><br>
+        <textarea id="message" name="message" rows="4"></textarea><br>
+
+        <button type="submit">Gửi</button>
+    </form>
+</div>
+
+<script>
+function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.style.display = menu.style.display === "none" ? "block" : "none";
+}
+
+function changeTextColor() {
+    const table = document.getElementById("components-table");
+    table.classList.toggle("color-toggle");
+}
+
+function sortByPrice() {
+    const table = document.getElementById("components-table").getElementsByTagName('tbody')[0];
+    const rows = Array.from(table.getElementsByTagName("tr"));
+
+    rows.sort((a, b) => {
+        const priceA = parseInt(a.cells[1].textContent);
+        const priceB = parseInt(b.cells[1].textContent);
+        return priceA - priceB;
+    });
+
+    table.innerHTML = "";
+    rows.forEach(row => table.appendChild(row));
+}
+</script>
+
+</body>
+</html>
